@@ -1,0 +1,66 @@
+.hidden { display: none;}
+
+html, body {
+  height: 100vh;} /*vh means Viewport height - a dynamic measurement area
+  that refers to the visible area (viewport) of a browser window */
+
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 1140px;
+}
+
+main > div {
+  flex: 1;
+  border: thin solid black;
+  padding: 1em;
+}
+
+.box > span {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 0.5em;
+  background-color: blue;
+  color: white;
+}
+
+.box:nth-of-type(1) {
+  background-color: pink;
+}
+
+.box:nth-of-type(2) {
+  background-color: red;
+}
+
+.box:nth-of-type(3) {display: none;}
+
+.box:nth-of-type(4) {display: none;}
+
+
+@media screen and (min-width: 641px) {
+  main { flex-direction: row;}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+
+.box:nth-of-type(1) { background-color: blue; }
+
+.box:nth-of-type(2) { background-color: purple; }
+
+.box:nth-of-type(3) { background-color: grey; }
+
+.box:nth-of-type(4) { background-color: brown; }
+
+.box:nth-of-type(3), .box:nth-of-type(4) { display: inline-block;}
+
+}
